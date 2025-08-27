@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 10,
+    "articles": [
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "The Associated Press",
+            "title": "Venezuela releases 13 jailed in crackdown following disputed elecions, opposition says",
+            "description": "Venezuelan authorities did not immediately confirm the releases, but opposition leaders like Henrique Capriles celebrated on social media, calling it a \"step forward.\"",
+            "url": "https://www.nbcnews.com/news/latino/venezuela-releases-13-jailed-crackdown-disputed-elecions-opposition-sa-rcna226960",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250808-Nicolas-Maduro-rs-cee883.jpg",
+            "publishedAt": "2025-08-25T13:27:31Z",
+            "content": "Venezuelan authorities did not immediately confirm the releases, but opposition leaders like Henrique Capriles celebrated on social media, calling it a \"step forward."
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Minyvonne Burke",
+            "title": "Comedian Reggie Carroll killed in Mississippi shooting",
+            "description": "Comedian Reggie Carroll died in a shooting on Wednesday in Southhaven, Mississippi.",
+            "url": "https://www.nbcnews.com/news/us-news/comedian-reggie-carroll-killed-mississippi-shooting-rcna226944",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-reggie-carroll-mb-1404-79b2ea.jpg",
+            "publishedAt": "2025-08-25T13:23:02Z",
+            "content": "Comedian Reggie Carroll died in a shooting on Wednesday in Southhaven, Mississippi. \r\nSouthaven police responded to a shooting in the area of Burton Lane and took one person into custody on a murder"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "The Associated Press",
+            "title": "Tropical Storm Juliette forms in the Pacific as Fernand churns over open waters in the Atlantic",
+            "description": "MIAMI — Tropical Storm Juliette formed Monday in the Pacific Ocean hundreds of miles from Mexico’s Baja California peninsula as Tropical Storm Fernand churned in the Atlantic Ocean",
+            "url": "https://www.nbcnews.com/weather/storms/tropical-storm-juliette-forms-pacific-fernand-churns-open-waters-atlan-rcna226933",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-tropical-storm-juliette-mn-0850-c454d8.jpg",
+            "publishedAt": "2025-08-25T13:14:17Z",
+            "content": "MIAMI Tropical Storm Juliette formed Monday in the Pacific Ocean hundreds of miles from Mexicos Baja California peninsula as Tropical Storm Fernand churned in the Atlantic Ocean.\r\nNo coastal watches"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Becca Wood, TODAY",
+            "title": "Why are artists like Morgan Wallen removing their names from Grammy consideration?",
+            "description": "Morgan Wallen has decided his Billboard 200 No. 1 album won’t be in the running for a 2026 Grammy Award, joining a list of artists who have boycotted the potential accolade",
+            "url": "https://www.nbcnews.com/pop-culture/pop-culture-news/are-artists-morgan-wallen-removing-names-grammy-consideration-rcna226950",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-06/tdy-morgan-wallen-ld-main-250614-1216f3.jpg",
+            "publishedAt": "2025-08-25T12:58:48Z",
+            "content": "Morgan Wallen has decided his Billboard 200 No. 1 album wont be in the running for a 2026 Grammy Award, joining a list of artists who have boycotted the potential accolade.\r\nRepresentatives for Walle"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Yamiche Alcindor, Megan Lebowitz",
+            "title": "Trump to sign an executive order to end cashless bail in D.C.",
+            "description": "Trump plans to sign an executive order Monday aimed at eliminating cashless bail for arrested suspects in Washington, D.C., a senior White House official said.",
+            "url": "https://www.nbcnews.com/politics/white-house/trump-sign-executive-order-end-cashless-bail-dc-rcna226937",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-washington-arrest-mb-1246-b9028c.jpg",
+            "publishedAt": "2025-08-25T12:29:09Z",
+            "content": "WASHINGTON President Donald Trump plans to sign an executive order Monday aimed at eliminating cashless bail for arrested suspects in Washington, D.C., a senior White House official said. "
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Gary Grumbach, Marlene Lenthang, Rebecca Cohen",
+            "title": "Kilmar Abrego Garcia taken into ICE custody at appointment",
+            "description": "BALTIMORE — Kilmar Abrego Garcia, who reunited with his family last week after 160 days apart following his mistaken deportation to El Salvador, was taken into ICE custody on Monday after an immigration check-in, his attorney said.",
+            "url": "https://www.nbcnews.com/news/us-news/kilmar-abrego-garcia-ice-check-in-rcna226866",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250823-kilmar-abrego-garcia-mn-1045-dd3946.jpg",
+            "publishedAt": "2025-08-25T12:17:48Z",
+            "content": "Kilmar Abrego Garcia, who reunited with his family last week after 160 days apart following his mistaken deportation to El Salvador, was taken into ICE custody on Monday after an immigration check-in, his attorney said."
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "The Associated Press",
+            "title": "Keurig Dr Pepper to buy Peet's Coffee owner in $18 billion deal",
+            "description": "Keurig Dr Pepper said Monday it will buy Peet’s Coffee owner JDE Peet’s in a deal worth about $18 billion (15.7 billion euro)",
+            "url": "https://www.nbcnews.com/business/business-news/keurig-dr-pepper-buy-peets-coffee-owner-18-billion-deal-rcna226942",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-dr-pepper-mb-1313-f8df5d.jpg",
+            "publishedAt": "2025-08-25T12:17:06Z",
+            "content": "Keurig Dr Pepper said Monday it will buy Peet’s Coffee owner JDE Peet’s in a deal worth about $18 billion (15.7 billion euro)"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Jay Ganglani, The Associated Press",
+            "title": "France summons U.S. Ambassador Kushner over  antisemitism letter",
+            "description": "France has summoned the American ambassador to Paris after he wrote a letter to President Emmanuel Macron alleging that the country had not taken “sufficient action” to combat antisemitism.",
+            "url": "https://www.nbcnews.com/world/europe/france-summons-us-ambassador-kushner-antisemitism-letter-rcna226925",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-charles-kushner-mb-0913-17f19a.jpg",
+            "publishedAt": "2025-08-25T11:48:22Z",
+            "content": "France has summoned the American ambassador to Paris after he wrote a letter to President Emmanuel Macron alleging that the country had not taken “sufficient action” to combat antisemitism."
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "NBC News",
+            "title": "Trump administration live updates: D.C. schools start classes as National Guard starts carrying firearms",
+            "description": "Live updates: D.C. schools start classes amid federal takeover; National Guard start carrying firearms",
+            "url": "https://www.nbcnews.com/politics/trump-administration/live-blog/trump-dc-national-guard-ice-russia-ukraine-gaza-tariffs-live-updates-rcna226788",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250823-donald-trump-mn-1630-9401f2.jpg",
+            "publishedAt": "2025-08-25T11:16:01Z",
+            "content": "Chicagos mayor is defying Trumps threat to deploy the National Guard to the Windy City to combat crime and scoping out legal avenues to prevent soldiers from overtaking the city.\r\nOn Friday, Trump ta… [+522 chars]"
+        },
+        {
+            "source": {
+                "id": "nbc-news",
+                "name": "NBC News"
+            },
+            "author": "Reuters",
+            "title": "Delisting of Chinese developer Evergrande closes tumultuous chapter for investors",
+            "description": "China Evergrande Group was kicked off the Hong Kong stock exchange on Monday in one of the largest delistings by market value and volume in recent years and marking an end to what’s been a tumultuous boom-and-bust saga for its investors.",
+            "url": "https://www.nbcnews.com/world/hong-kong/delisting-chinese-developer-evergrande-closes-tumultuous-chapter-rcna226932",
+            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-08/250825-evergrande-mb-1119-f98c9c.jpg",
+            "publishedAt": "2025-08-25T11:05:47Z",
+            "content": "China Evergrande Group was kicked off the Hong Kong stock exchange on Monday in one of the largest delistings by market value and volume in recent years and marking an end to what’s been a tumultuous boom-and-bust saga for its investors."
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Typhoon Kajiki batters Vietnam's coastal provinces",
+            "description": "It comes less than a year after Vietnam was hit by Typhoon Yagi, which killed 300 people.",
+            "url": "https://www.bbc.co.uk/news/articles/cwy0kqgxwwlo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/d543/live/83666910-81a1-11f0-ba2e-9321f123f193.jpg",
+            "publishedAt": "2025-08-25T13:52:15.5527579Z",
+            "content": "Vietnam's meteorological centre says the typhoon could trigger flash floods and landslides, and 400 communes across six provinces have been put on alert. "
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Inside Donetsk as residents flee attacks on Ukrainian region Putin wants to control",
+            "description": "Quentin Sommerville follows volunteers carrying out evacuations in eastern Ukraine as drone attacks rage.",
+            "url": "https://www.bbc.co.uk/news/articles/c209yn1ygz6o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/3d9d/live/3207d060-8113-11f0-a34f-318be3fb0481.jpg",
+            "publishedAt": "2025-08-25T13:07:23.1633122Z",
+            "content": "Senior Lieutenant Dima of the 14th Brigade National Guard, a 42-year-old surgeon, moves from patient to patient. "
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Rivers at critical level as Scotland's water supplies feel the strain",
+            "description": "Restrictions are being introduced on water use by businesses near two rivers where the levels are low.",
+            "url": "https://www.bbc.co.uk/news/articles/c0qly7g9pepo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6f27/live/ea205080-8192-11f0-bad1-43a8cc805880.jpg",
+            "publishedAt": "2025-08-25T12:52:21.9745548Z",
+            "content": "The Met Office says the coasts of East Lothian, Fife and the Moray Firth receive less than 700mm of rainfall in an average year, in contrast to the western Scottish Highlands where the annual total"
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Six children rescued in 'major incident' at Aberavon beach",
+            "description": "All six children were assessed at the scene and transferred to the ambulance service for further treatment.",
+            "url": "https://www.bbc.co.uk/news/articles/cm2vjjgdklgo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ea51/live/5f1409d0-819e-11f0-ba2e-9321f123f193.jpg",
+            "publishedAt": "2025-08-25T12:37:14.9286359Z",
+            "content": "Six young children were pulled from the sea in a \"major incident\" at a popular beach, a rescue team has said. \r\nPort Talbot Coastguard Rescue said it responded to reports of multiple children being.. "
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Half of UK job losses in hospitality, say bosses",
+            "description": "Lobby group calls for urgent action to lower taxes, but the government says it is helping establishments.",
+            "url": "https://www.bbc.co.uk/news/articles/c05ey2ypp92o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6853/live/045447d0-81a3-11f0-ba2e-9321f123f193.jpg",
+            "publishedAt": "2025-08-25T11:37:19.2396817Z",
+            "content": "An increase to the minimum wage, which came in this April, means that bosses have had to pay workers more in an environment where other costs, such as ingredients and energy bills, are also rising. "
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Virginia Giuffre memoir to be published months after death",
+            "description": "She had finished working on the \"intimate\" and \"heartbreaking\" book before she took her own life in April, her publisher says.",
+            "url": "https://www.bbc.co.uk/news/articles/c2djy7048pdo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/64a5/live/1d77f680-8185-11f0-843f-7b3b652c1219.jpg",
+            "publishedAt": "2025-08-25T08:37:21.2411736Z",
+            "content": "In 2022, the prince reached an out-of-court settlement with Ms Giuffre. The settlement included a statement in which he expressed regret for his association with Epstein, but contained no admission."
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "'Half alive': Mushroom lunch survivor tells court of murders' impact",
+            "description": "Family members of the three people Erin Patterson murdered with toxic mushrooms have confronted her in court.",
+            "url": "https://www.bbc.co.uk/news/articles/cp8zr04wzz9o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/82bc/live/5deef3f0-8160-11f0-9a7b-474c9b686dfe.jpg",
+            "publishedAt": "2025-08-25T07:52:21.7411613Z",
+            "content": "In the days after the meal at Patterson's home, her former in-laws Don and Gail Patterson, both 70, died in hospital, as well as Gail's sister, Heather Wilkinson, 66."
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Get ready for fracking, Reform UK tells energy firms",
+            "description": "The party is serious about going after shale gas - but critics argue it's too difficult and costly.",
+            "url": "https://www.bbc.co.uk/news/articles/c74172wlezwo",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/ab3a/live/b701fb90-7dd2-11f0-88a2-b9725373e32e.jpg",
+            "publishedAt": "2025-08-25T05:37:25.381112Z",
+            "content": "Fracking has been going on in the British oil and gas sector for decades and largely flew under the political radar until about 2010, when shale gas extraction started taking off in the United States."
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Lives torn apart by fatal crashes on the A9, Scotland's longest road",
+            "description": "The family of an American woman who died in a crash on the A9 with her brother and mother talk about the impact.",
+            "url": "https://www.bbc.co.uk/news/articles/c70xn6pnx0go",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6b0d/live/6aebcd00-7d1c-11f0-b8e7-2dc6f436f923.jpg",
+            "publishedAt": "2025-08-25T01:07:23.5685983Z",
+            "content": "Transport Secretary Fiona Hyslop said she understood there were frustrations around the dualling of the road.\r\n\"Any loss of a life on the A9, or indeed other roads in Scotland, is a tragedy."
+        },
+        {
+            "source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "Ecuador: Victims of violent cartels tell BBC they now hide from US authorities",
+            "description": "Donald Trump declared some cartels to be terrorist organisations. So why are the victims of cartels in hiding?",
+            "url": "https://www.bbc.co.uk/news/articles/cvg4kd385e4o",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c316/live/0ac4e770-813d-11f0-ab3e-bd52082cd0ae.jpg",
+            "publishedAt": "2025-08-25T00:37:23.0687188Z",
+            "content": "This law is the subject of \"much, much interpretation\", according to Kathleen Bush-Joseph of the Migration Policy Institute.\r\nDonald Trump declared some cartels to be terrorist organisations. So why are the victims of cartels in hiding."
+        }
+    ]
+}
