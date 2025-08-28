@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ArrowUpRight, Share2, Mail, ThumbsUp } from 'lucide-react';
+import { ChevronLeft, ArrowUpRight, Share2, Mail, ThumbsUp, LoaderCircle } from 'lucide-react';
 import {  ArticleComponentProps } from '@/types/';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -27,8 +27,9 @@ export default function ArticleComponent({
 
   if (articles.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full">
-        <p className="text-gray-500">Loading...</p>
+      <div className="flex flex-col items-center justify-center h-full gap-2">
+        <LoaderCircle className="w-6 h-6 animate-spin text-gray-600 dark:text-gray-300" />
+        <p className="text-gray-600 dark:text-gray-300">Loading...</p>
       </div>
     );
   }
@@ -66,19 +67,17 @@ export default function ArticleComponent({
           }}
         >
           {articles.map((article, index) => {
-            const displayContent = article.AISummarizeContent ?? article.content;
+            const displayContent = article.AISummarizeContent ?? article.description;
             let contentBullets: string[];
 
             if (article.AISummarizeContent) {
-              // AI already provides bullet-style text → split by newline, strip "*"
               contentBullets = displayContent
                 .split('\n')
-                .map((line) => line.replace(/^\*\s*/, '').trim()) // remove leading "*"
+                .map((line) => line.replace(/^\*\s*/, '').trim()) 
                 .filter((line) => line.length > 0);
             } else {
-              // Original NewsAPI content → split by period
               contentBullets = displayContent
-                .split('.')
+                .split(/(?<=[.?!])\s+(?=[A-Z])/)
                 .map((line) => line.trim())
                 .filter((line) => line.length > 0);
             }

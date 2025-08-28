@@ -12,6 +12,7 @@ The app also features a **Swiper-powered carousel** for seamless navigation betw
 - 📰 **NewsAPI.org** for fetching the latest headlines
 - 🤖 **AI Summaries** powered by OpenRouter + Google Gemma-3-12B-IT
 - 🎠 **Swiper.js** carousel for smooth browsing experience
+- 🌙 **Dark mode support** for better readability
 - 🔗 Direct link to **Read Full Story** from the original source
 - 📤 Share options (Email, Like, Copy, etc.)
 

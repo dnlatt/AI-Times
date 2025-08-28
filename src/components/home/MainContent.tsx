@@ -5,6 +5,7 @@ import ArticleComponent from '@/components/home/ArticleComponent';
 import ThumbnailComponent from '@/components/home/ThumbnailComponent';
 import { Article } from '@/types/';
 import { fetchArticles } from '@/lib/api';
+import { LoaderCircle } from 'lucide-react';
 
 export default function MainContent() {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -24,7 +25,10 @@ export default function MainContent() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p>Loading news...</p>
+        <div className="flex flex-col items-center justify-center h-full gap-2">
+          <LoaderCircle className="w-6 h-6 animate-spin text-gray-600 dark:text-gray-300" />
+          <p className="text-gray-600 dark:text-gray-300">Loading...</p>
+        </div>
       </div>
     );
   }

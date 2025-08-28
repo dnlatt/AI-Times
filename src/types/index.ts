@@ -29,3 +29,7 @@ export type ArticleComponentProps = {
   setSelectedIndex: (index: number) => void;
 }
 
+
+export type RootLayoutProps = {
+  children: React.ReactNode;
+};
