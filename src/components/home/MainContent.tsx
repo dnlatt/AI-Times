@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import ArticleComponent from '@/components/home/ArticleComponent';
 import ThumbnailComponent from '@/components/home/ThumbnailComponent';
-import { NewsResponse, Article } from '@/types/';
+import { Article } from '@/types/';
+import { fetchArticles } from '@/lib/api';
 
 export default function MainContent() {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -11,24 +12,13 @@ export default function MainContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // In a real app, this would be a server component or a more robust fetch
-    // For this example, we mock a client-side fetch.
-    const fetchArticles = async () => {
-      try {
-        const res = await fetch('/data/fallback-news.json');
-        if (!res.ok) {
-          throw new Error('Failed to fetch articles');
-        }
-        const data: NewsResponse = await res.json();
-        setArticles(data.articles);
-      } catch (error) {
-        console.error('Error fetching articles:', error);
-      } finally {
-        setLoading(false);
-      }
+    const loadArticles = async () => {
+      const fetched = await fetchArticles();
+      setArticles(fetched);
+      setLoading(false);
     };
 
-    fetchArticles();
+    loadArticles();
   }, []);
 
   if (loading) {

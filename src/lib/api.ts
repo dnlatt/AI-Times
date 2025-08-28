@@ -1,136 +1,78 @@
-"use client"; // Required because we use localStorage (client-side only)
+import { NewsResponse, Article } from "@/types/";
 
-import { summarizeArticle } from "./openrouter";
-
-// -----------------------------
-// Type Definitions
-// -----------------------------
-export interface Article {
-  title: string;
-  url: string;
-  source?: { id: string | null; name: string };
-  author?: string;
-  description?: string;
-  urlToImage?: string;
-  publishedAt?: string;
-  content?: string;
-  AISummarizeContent: string; // Filled after summarization
-}
-
-interface NewsApiResponse {
-  status: string;
-  totalResults: number;
-  articles: Omit<Article, "AISummarizeContent">[];
-}
-
-// -----------------------------
-// Constants for Caching
-// -----------------------------
-const CACHE_KEY = "newsCache";
-const CACHE_TIMESTAMP_KEY = "newsCacheTimestamp";
-const CACHE_DURATION = 1000 * 60 * 60; // 1 hour
-
-// -----------------------------
-// Main Function to Fetch News
-// -----------------------------
-export async function fetchNews(): Promise<Article[]> {
+export async function fetchArticles(): Promise<Article[]> {
   try {
-    // Step 1: Try loading from cache
-    const cached = loadFromCache();
-    if (cached) {
-      console.log("✅ Using cached news data");
-      return cached;
+    // Step 1: Fetch from NewsAPI
+    const res = await fetch(
+      `https://newsapi.org/v2/top-headlines?sources=nbc-news&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch articles from NewsAPI");
     }
 
-    // Step 2: If cache is expired/missing, fetch new data
-    console.log("🌐 Fetching fresh news data from NewsAPI...");
-    const apiKey = process.env.NEXT_PUBLIC_NEWS_API_KEY; // Store in .env
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+    const data: NewsResponse = await res.json();
 
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`News API failed with status ${res.status}`);
+    // Step 2: Summarize each article via OpenRouter
+    const summarizedArticles: Article[] = await Promise.all(
+      data.articles.map(async (article) => {
+        const systemPrompt = `You are an assistant that always responds in exactly 3 concise bullet points. Do not add introductions — only bullet points.`;
+        const userPrompt = `Summarize this article in 3 bullet points:\n\n${article.url}`;
 
-    const data: NewsApiResponse = await res.json();
-    if (!data.articles) throw new Error("Invalid News API response");
+        try {
+          const summaryRes = await fetch(
+            "https://openrouter.ai/api/v1/chat/completions",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENROUTER_API_KEY}`,
+              },
+              body: JSON.stringify({
+                model: "google/gemma-3-12b-it:free",
+                messages: [
+                  { role: "system", content: systemPrompt },
+                  { role: "user", content: userPrompt },
+                ],
+              }),
+            }
+          );
 
-    // Step 3: Enrich with AISummarizeContent
-    const enriched = await summarizeArticles(data.articles);
+          if (!summaryRes.ok) throw new Error("Failed to summarize article");
 
-    // Step 4: Save to cache
-    saveToCache(enriched);
+          const summaryData = await summaryRes.json();
+          const summaryText =
+            summaryData?.choices?.[0]?.message?.content ?? null;
 
-    return enriched;
-  } catch (err) {
-    console.error("❌ Failed to fetch from News API. Falling back to local JSON:", err);
+          return {
+            ...article,
+            AISummarizeContent: summaryText,
+          };
+        } catch (err) {
+          console.error(`Summarization failed for ${article.url}`, err);
+          return {
+            ...article,
+            AISummarizeContent: null,
+          };
+        }
+      })
+    );
 
-    // Step 5: Use fallback file
+    return summarizedArticles;
+  } catch (error) {
+    console.error("Error fetching articles:", error);
+
+    // Step 3: Fallback to local JSON
     try {
-      const fallback = await import("/data/fallback-news.json");
-      const articles: Omit<Article, "AISummarizeContent">[] = fallback.default;
-
-      const enriched = await summarizeArticles(articles);
-      return enriched;
-    } catch (fallbackErr) {
-      console.error("❌ Failed to load fallback news JSON:", fallbackErr);
+      const fallbackRes = await fetch("/data/fallback-news.json");
+      if (!fallbackRes.ok) {
+        throw new Error("Failed to fetch fallback articles");
+      }
+      const fallbackData: NewsResponse = await fallbackRes.json();
+      return fallbackData.articles;
+    } catch (fallbackError) {
+      console.error("Fallback fetch also failed:", fallbackError);
       return [];
     }
   }
-}
-
-// -----------------------------
-// Caching Helpers
-// -----------------------------
-function loadFromCache(): Article[] | null {
-  try {
-    const timestamp = localStorage.getItem(CACHE_TIMESTAMP_KEY);
-    const cache = localStorage.getItem(CACHE_KEY);
-
-    if (!timestamp || !cache) return null;
-
-    const now = Date.now();
-    if (now - parseInt(timestamp, 10) > CACHE_DURATION) {
-      console.log("⚠️ Cache expired");
-      return null;
-    }
-
-    return JSON.parse(cache) as Article[];
-  } catch (err) {
-    console.error("⚠️ Failed to read from cache:", err);
-    return null;
-  }
-}
-
-function saveToCache(data: Article[]): void {
-  try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-    localStorage.setItem(CACHE_TIMESTAMP_KEY, Date.now().toString());
-  } catch (err) {
-    console.error("⚠️ Failed to save to cache:", err);
-  }
-}
-
-// -----------------------------
-// Summarization Logic
-// -----------------------------
-async function summarizeArticles(
-  articles: Omit<Article, "AISummarizeContent">[]
-): Promise<Article[]> {
-  const enriched: Article[] = [];
-
-  for (const article of articles) {
-    let summary = "";
-    try {
-      summary = await summarizeArticle(article.url);
-    } catch (err) {
-      console.error(`❌ Failed to summarize ${article.url}:`, err);
-      summary = "Summary unavailable";
-    }
-
-    enriched.push({
-      ...article,
-      AISummarizeContent: summary || "Summary unavailable",
-    });
-  }
-
-  return enriched;
 }

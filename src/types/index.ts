@@ -10,6 +10,7 @@ export type Article = {
   urlToImage: string;
   publishedAt: string;
   content: string;
+  AISummarizeContent: string | null;
 };
 
 export type NewsResponse = {

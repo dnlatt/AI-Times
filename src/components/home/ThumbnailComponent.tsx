@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Article, ArticleComponentProps } from '@/types/';
+import { ArticleComponentProps } from '@/types/';
 import { Button } from '../ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 

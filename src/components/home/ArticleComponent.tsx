@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Button } from '../ui/button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ArrowUpRight, Share2, Mail, ThumbsUp } from 'lucide-react';
 import {  ArticleComponentProps } from '@/types/';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
@@ -67,9 +66,22 @@ export default function ArticleComponent({
           }}
         >
           {articles.map((article, index) => {
-            const contentBullets = article.content
-              .split('.')
-              .filter((s) => s.trim().length > 0);
+            const displayContent = article.AISummarizeContent ?? article.content;
+            let contentBullets: string[];
+
+            if (article.AISummarizeContent) {
+              // AI already provides bullet-style text → split by newline, strip "*"
+              contentBullets = displayContent
+                .split('\n')
+                .map((line) => line.replace(/^\*\s*/, '').trim()) // remove leading "*"
+                .filter((line) => line.length > 0);
+            } else {
+              // Original NewsAPI content → split by period
+              contentBullets = displayContent
+                .split('.')
+                .map((line) => line.trim())
+                .filter((line) => line.length > 0);
+            }
 
             return (
               <SwiperSlide key={index} className="w-full">
@@ -84,28 +96,47 @@ export default function ArticleComponent({
                     <span className="font-medium">
                       By: {article.author} | {new Date(article.publishedAt).toLocaleDateString()}
                     </span>
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline dark:text-blue-400 font-medium"
-                    >
-                      Read Full Story →
-                    </a>
+                    <span className="font-medium">
+                      <a
+                        href={article.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline dark:text-blue-400 font-medium inline-flex items-center gap-1"
+                      >
+                        Read Full Story <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    </span>
+
+                    
                   </div>
 
                   {/* Content + Image */}
                   <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
                     {/* Text */}
-                    <div className="flex-1 min-w-0 order-2 lg:order-1">
-                      <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm md:text-base leading-relaxed break-words">
-                        {article.description}
-                      </p>
-                      <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed break-words">
-                        {contentBullets.map((sentence, bulletIndex) => (
-                          <li key={bulletIndex}>{sentence}.</li>
+                    <div className="flex-1 min-w-0 order-2 lg:order-1 flex flex-col">
+                      <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                        {contentBullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="mt-2 h-2 w-2 rounded-full bg-gray-700 flex-shrink-0"></span>
+                            <span className="ml-3 text-gray-700 dark:text-gray-300">{bullet}</span>
+                          </li>
                         ))}
                       </ul>
+
+                      <div className="mt-auto flex items-center justify-between w-full">
+                        {/* Left: AI Summary */}
+                        <div className="text-gray-700 dark:text-gray-300 text-xs md:text-xs leading-relaxed break-words border-2 border-solid border-gray-300 dark:border-gray-600 rounded-md px-2 py-1">
+                          ✨ AI SUMMARY
+                        </div>
+
+                        {/* Right: Share Icons */}
+                        <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300">
+                          
+                          <Mail className="w-4 h-4 cursor-pointer hover:text-blue-500" />
+                          <ThumbsUp className="w-4 h-4 cursor-pointer hover:text-blue-500" />
+                          <Share2 className="w-4 h-4 cursor-pointer hover:text-blue-500" />
+                        </div>
+                      </div>
                     </div>
 
                     {/* Image */}
