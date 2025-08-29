@@ -37,7 +37,7 @@ The app also features a **Swiper-powered carousel** for seamless navigation betw
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ai-times.git
+git clone https://github.com/dnlatt/ai-times.git
 cd ai-times
 ```
 
@@ -82,4 +82,4 @@ npm run dev
 
 ## 📜 License
 
-MIT License © 2025 Latt
+MIT License
