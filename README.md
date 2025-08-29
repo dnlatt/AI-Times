@@ -4,6 +4,8 @@ An AI-powered news reader built with **Next.js** and **Tailwind CSS**.
 It fetches the latest top headlines using [NewsAPI.org](https://newsapi.org/) and generates concise AI-powered summaries using [OpenRouter API](https://openrouter.ai/) with **Google Gemma-3-12B-IT**.  
 The app also features a **Swiper-powered carousel** for seamless navigation between articles.
 
+> 🌐 **Live Demo:** https://ai-times.onrender.com/
+
 ---
 
 ## ✨ Features
@@ -19,6 +21,9 @@ The app also features a **Swiper-powered carousel** for seamless navigation betw
 ---
 
 ## 📸 Screenshots
+
+<img width="1559" height="1014" alt="Screenshot 2025-08-29 at 5 37 27 PM" src="https://github.com/user-attachments/assets/6e87268a-af17-4bb1-abb9-fc133e1d1ada" />
+
 
 ---
 
@@ -50,8 +55,8 @@ npm install
 3. Set up environment variables in `.env.local`:
 
 ```bash
-NEXT_PUBLIC_NEWS_API_KEY=your_newsapi_key
-NEXT_PUBLIC_OPENROUTER_API_KEY=your_openrouter_api_key
+NEWS_API_KEY=your_newsapi_key
+OPENROUTER_API_KEY=your_openrouter_api_key
 ```
 
 4. Run the development server:
