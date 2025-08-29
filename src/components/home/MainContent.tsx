@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import ArticleComponent from '@/components/home/ArticleComponent';
 import ThumbnailComponent from '@/components/home/ThumbnailComponent';
 import { Article } from '@/types/';
-import { fetchArticles } from '@/lib/api';
 import { LoaderCircle } from 'lucide-react';
 
 export default function MainContent() {
@@ -14,9 +13,17 @@ export default function MainContent() {
 
   useEffect(() => {
     const loadArticles = async () => {
-      const fetched = await fetchArticles();
-      setArticles(fetched);
-      setLoading(false);
+      try {
+        const res = await fetch("/api/news"); // server-side route
+        if (!res.ok) throw new Error("Failed to fetch articles");
+        const data: Article[] = await res.json();
+        setArticles(data);
+      } catch (err) {
+        console.error(err);
+        setArticles([]);
+      } finally {
+        setLoading(false);
+      }
     };
 
     loadArticles();
