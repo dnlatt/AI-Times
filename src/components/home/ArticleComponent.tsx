@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ArrowUpRight, Share2, Mail, ThumbsUp, LoaderCircle } from 'lucide-react';
+import { ArrowUpRight, Share2, Mail, ThumbsUp, LoaderCircle } from 'lucide-react';
 import {  ArticleComponentProps } from '@/types/';
 import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
